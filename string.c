@@ -1,8 +1,8 @@
 #include <stdio.h>
 #define arrSize 100
 int myStrlen(char *str){
-    int length = 0;
-    for (int i=0; str[i] != 0; i++){
+    int i,length = 0;
+    for (i=0; str[i] != 0; i++){
         length++;
     }
     return(length);
@@ -59,9 +59,20 @@ int myStrCmp(char *inputStr,char *inputStr1){
         i++;
     }
 }
+/*int myStrCmp2(char *inputStr,char *inputStr1){
+    int i=0;
+    for(i=0;i<inputStr[i]!='\0';i++){
+        if(inputStr[i]==inputStr1[i]){
+            return 1;
+        }else{
+            return 2;
+        }
+    }
+    return 1,2;
+}
 
 
-
+*/
 int main(void){
     char inputStr[arrSize],inputStr1[arrSize],inputStr2[arrSize],inputStr3[arrSize];
     int strlen;
@@ -87,8 +98,13 @@ int main(void){
     printf("%s are equal to %s",inputStr2,inputStr3);
     else
        printf("%s is greater than %s",inputStr2,inputStr3);
-
+/*
+     int res=myStrCmp2(inputStr2,inputStr3);
+     if(res==1){
+        printf("strings are same");
+     }else if(res==2){
+        printf("strings are different");
+     }*/
 
     return 0;
-
 }
